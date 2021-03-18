@@ -1,0 +1,23 @@
+﻿@page
+
+
+@model OdeToFood.Pages.Restaurants.DetailModel
+@{
+}
+<a asp-page="./List" class="btn btn-light">< All Restaurants</a>
+
+<h2>@Model.Restaurant.Name</h2>
+<div>
+    Location: @Model.Restaurant.Location
+</div>
+<div>
+    Cuisine: @Model.Restaurant.Cuisine
+</div>
+<div>
+    ID: @Model.Restaurant.ID
+</div>
+
+<form method="post">
+    <a asp-page="./Edit" asp-route-restaurantId="@Model.Restaurant.ID" class="btn btn-primary">Edit</a>
+    <button type="submit" asp-route-restaurantId="@Model.Restaurant.ID" onclick="return confirm('Are you sure you want to delete this restaurant?')" class="btn btn-danger">Delete</button>
+</form>

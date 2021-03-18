@@ -1,0 +1,30 @@
+﻿@page
+@model OdeToFood.Pages.ProjectListModel
+@{
+    ViewData["Title"] = "Projects";
+}
+
+<table class="table">
+    <tr>
+        <th scope="col">
+            Project's Name
+        </th>
+        <th scope="col" class="d-flex justify-content-center">
+            Description
+        </th>
+        <th scope="col">
+            Link
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <a>Ode To Food</a>
+        </td>
+        <td class="text-muted">
+            An app that allows the user to view, edit, search and add restaurants.
+        </td>
+        <td>
+            <a asp-page="./Restaurants/List" class="btn btn-primary">View Project</a>
+        </td>
+    </tr>
+</table>
